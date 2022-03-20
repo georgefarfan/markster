@@ -1,12 +1,17 @@
-import { View } from "react-native";
-import { FloatButton } from "../components/FloatButton";
-import { FileList } from "./Files";
+import { FileList } from "../components/Files";
+import { FileManagerScreen } from "./FileManager";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export const HomeScreen = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <FileList></FileList>
-      <FloatButton></FloatButton>
-    </View>
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName="FileList"
+    >
+      <Stack.Screen name="FileList" component={FileList} />
+      <Stack.Screen name="FileManager" component={FileManagerScreen} />
+    </Stack.Navigator>
   );
 };
