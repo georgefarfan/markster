@@ -18,7 +18,7 @@ export const FloatButton = () => {
         borderRadius: 100,
       }}
     >
-      <Icon name="plus" size={25} color="#54B18C" />
+      <Icon name="plus" size={20} color="#54B18C" />
     </TouchableOpacity>
   );
 };

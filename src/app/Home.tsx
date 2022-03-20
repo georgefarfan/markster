@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { FloatButton } from "../../components/FloatButton";
+import { FloatButton } from "../components/FloatButton";
 import { FileList } from "./Files";
 
 export const HomeScreen = () => {
