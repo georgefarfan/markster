@@ -5,15 +5,14 @@ import { SettingsScreen } from "./src/app/Setting";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { BookmarksScreen } from "./src/app/Bookmarks";
 import { Provider } from "react-redux";
-import filesReducer from "./src/store/reducers/files.reducer";
 import { createStore } from "redux";
+import { Reducers } from "./src/store/reducers";
 
 const Tab = createBottomTabNavigator();
 const tabBarStyle = {
   height: 50,
 };
-const store = createStore(filesReducer);
-store.subscribe(() => console.log(store.getState()));
+const store = createStore(Reducers);
 
 export default function App() {
   return (
